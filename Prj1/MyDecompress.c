@@ -3,6 +3,11 @@
 #include <ctype.h>
 #include <string.h>
 
+/*
+    The decompression file will take in the compressed.txt that the compression file inputted in. It will reverse what the compression program did 
+    and reads the data in the compressed file and writes the original data to the decompressed.txt.
+*/
+
 #define MAX_COUNT_DIGITS 10 // Max digits to 10 so we can prevent buffer overflow
 
 int main() {
