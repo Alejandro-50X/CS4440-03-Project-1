@@ -4,8 +4,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-// Note: This is your original compression logic wrapped in a main function
-// that accepts command-line arguments (argc and argv)
+// the compression file now takes arguments 
 int main(int argc, char *argv[]) {
     FILE *source, *destination;
     int character;
@@ -16,32 +15,32 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // argv[1] is the source file name (e.g., "source.txt")
-    // argv[2] is the destination file name (e.g., "compressed.txt")
+    // argv[1] is the source file name ("source.txt")
+    // argv[2] is the destination file name ("compressed.txt")
     source = fopen(argv[1], "r");
     destination = fopen(argv[2], "w");
 
     if (!source || !destination) {
-        perror("Error opening file"); // Use perror to show specific file error
+        perror("Error opening file"); // Using perror to show specific file error
         return 1;
     }
 
     int count = 1;
-    // Use fgetc for initialization to handle the first character correctly
+    // reads the first character and if it's EOF then the file is empty and closes it 
     int first_char_int = fgetc(source);
     if (first_char_int == EOF) {
         fclose(source);
-        fclose(destination);
+        fclose(destination); 
         return 0; // empty file
     }
-    char currentChar = (char)first_char_int;
+    char currentChar = (char)first_char_int; // sets the currentChar to the first character found in the file
 
-    // Read the next character
+    // Readsa the next character
     character = fgetc(source);
-
+    // keeps the main compression loop going while there are still characters to read
     while (character != EOF) {
         if (character == currentChar) {
-            // same run
+            // same run if the new character and current character are the same
             count++;
         }
         else if (character == ' ' || character == '\n') {
@@ -56,13 +55,11 @@ int main(int argc, char *argv[]) {
                 }
             }
 
-            // write the space/newline
+            // write the space or newline
             fputc(character, destination);
 
-            // The original logic had complex reading here. Simpler to just reset:
-            // reset
             count = 1;
-            currentChar = fgetc(source); // Read the character after the space/newline
+            currentChar = fgetc(source); // Read the character after the space or newline
             if (currentChar == EOF) break; // Check if we hit EOF right after the delimiter
             character = fgetc(source); // Read the character *after* the new currentChar
             continue; // Go back to the while loop start
@@ -79,7 +76,7 @@ int main(int argc, char *argv[]) {
                 }
             }
 
-            // start new run
+            // starts a new run
             count = 1;
             currentChar = character;
         }
@@ -88,7 +85,7 @@ int main(int argc, char *argv[]) {
     }
 
     // flush the final run
-    if (currentChar != EOF) { // Ensure there was actually something to flush
+    if (currentChar != EOF) { // Ensures that there is actually something to flush
         if (count >= 16 && currentChar == '1') {
             fprintf(destination, "+%d+", count);
         } else if (count >= 16 && currentChar == '0') {
