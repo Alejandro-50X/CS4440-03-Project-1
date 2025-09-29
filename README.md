@@ -5,7 +5,7 @@ To compile the c code you want to use gcc programName.c -o programName
 For the problems dealing with compression if you wish to get an error output simply enter the "./ProgramName" without the arguments for the source or destination file and you will get an error
 
 Question 1: MyCompress
-Find the path to the code within your files and in your terminal change to that directory. Once your in that directory use the command ./MyCompress source.txt compressed.txt
+Find the path to the code within your files and in your terminal change to that directory. Once your in that directory use the command ./MyCompress source.txt 
 
 Question 2: MyDecompress
 Find the path to the code within your files and in your terminal change to that directory. Once your in that directory use the command ./MyDecompress source.txt compressed.txt
