@@ -1,0 +1,188 @@
+Script started on 2025-09-29 05:03:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="80" LINES="24"]
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ echo "00000000000000000000 11111111111111111111"  > source.txt
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ gcc MyCompress.c -o m[KMyCompress
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./ MyCompress source.txt
+[?2004lbash: ./: Is a directory
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./ MyCompress source.txt[1P
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./[K[Kgcc[K[K[K./MyCompress source.txt[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc MyCompress.c -o MyCompress[1PCompressyCompress[C[1PompressDompresseompresscompress[C[1P[1@D[1@e[1@c
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./m[KMyDecompress S[Ksource.text compressed.txt
+[?2004lDecompression complete. Output written to 'decompressed.txt'.
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ gcc ForkCompress.c -o ForkCompress
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./ForkCompress source.txt compressed.txt
+[?2004lParent process (PID: 7514) forked child (PID: 7515). Waiting...
+Child process (PID: 7515) is starting compression...
+Child process (PID: 7515) completed with exit status 0.
+Compression successful.
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ .[Kgcc PipeCompress.c -o PipeCompress
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./PipeCompress source.txt compressed.txt
+[?2004lCompression complete: 'source.txt' -> 'compressed.txt' via pipe.
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./PipeCompress source.txt compressed.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004lUsage: ./PipeCompress <source_file> <destination_file>
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./PipeCompress source.txt compressed.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pgcc PipeCompress.c -o PipeCompress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./ForkCompress source.txt compressed.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004lUsage: ./ForkCompress <source_file> <destination_file>
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./ForkCompress [1PPipeCompress source.txt compressed.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pgcc PipeCompress.c -o PipeCompress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./ForkCompress source.txt compressed.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pgcc ForkCompress.c -o ForkCompress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./MyDecompress source.text compressed.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004lDecompression complete. Output written to 'decompressed.txt'.
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./MyDecompress ForkC[C[C[C[C[C[C[C[C[1PPipeCompress source.txt compressed.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pgcc PipeCompress.c -o PipeCompress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./ForkCompress source.txt compressed.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Pgcc ForkCompress.c -o ForkCompress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./MyDecompress source.text compressed.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pgcc MyDecompress.c -o MyDecompress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11P./MyCompress source.txt[K[K[K[K[K[K[K[K[K[K
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ gcc MinShell.c -o MinShell
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ ./MinShell
+[?2004lMinShell> ls
+compressed.txt	    MinShell	   MyCompress.c    PipeCompress
+compress-process.c  MinShell.c	   MyDecompress    PipeCompress.c
+decompressed.txt    MoreShell	   MyDecompress.c  source.txt
+DupShell	    MoreShell.c    ParFork	   typescript.txt
+DupShell.c	    MyCompress	   ParFork.c
+ForkCompress	    MyCompress2    ParThread
+ForkCompress.c	    MyCompress2.c  ParThread.c
+MinShell> date
+Mon Sep 29 05:13:16 AM UTC 2025
+MinShell> exit
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ gcc [K[K[K[K./MinShellgcc MinShell.c -o MinShell[1PShell[1PShelloShellrShelleShell[C[1P[1P[1@o[1@r[1@e
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ gcc MoreShell.c -o MoreShell[18P./MinShell[C[1PShell[1PShelloShellrShelleShell
+[?2004lMoreShell> more filename
+more: cannot open filename: No such file or directory
+MoreShell> ls -l~/tmp
+ls: invalid option -- '~'
+Try 'ls --help' for more information.
+MoreShell> ls -l
+total 280
+-rw-rw-r-- 1 vboxuser vboxuser    11 Sep 29 05:12 compressed.txt
+-rw-rw-r-- 1 vboxuser vboxuser  2674 Sep 29 05:01 compress-process.c
+-rw-rw-r-- 1 vboxuser vboxuser    62 Sep 29 05:12 decompressed.txt
+-rwxrwxr-x 1 vboxuser vboxuser 21184 Sep 27 10:33 DupShell
+-rw-rw-r-- 1 vboxuser vboxuser  4592 Sep 27 10:32 DupShell.c
+-rwxrwxr-x 1 vboxuser vboxuser 16384 Sep 29 05:09 ForkCompress
+-rw-rw-r-- 1 vboxuser vboxuser  2202 Sep 27 08:54 ForkCompress.c
+-rwxrwxr-x 1 vboxuser vboxuser 16568 Sep 29 05:12 MinShell
+-rw-rw-r-- 1 vboxuser vboxuser  2314 Sep 27 10:21 MinShell.c
+-rwxrwxr-x 1 vboxuser vboxuser 16608 Sep 29 05:14 MoreShell
+-rw-rw-r-- 1 vboxuser vboxuser  2717 Sep 27 10:26 MoreShell.c
+-rwxrwxr-x 1 vboxuser vboxuser 16176 Sep 29 05:05 MyCompress
+-rwxrwxr-x 1 vboxuser vboxuser 19528 Sep 27 09:13 MyCompress2
+-rw-rw-r-- 1 vboxuser vboxuser  3519 Sep 27 09:12 MyCompress2.c
+-rw-rw-r-- 1 vboxuser vboxuser  2312 Sep 27 06:53 MyCompress.c
+-rwxrwxr-x 1 vboxuser vboxuser 16304 Sep 29 05:07 MyDecompress
+-rw-rw-r-- 1 vboxuser vboxuser  3202 Sep 27 08:34 MyDecompress.c
+-rwxrwxr-x 1 vboxuser vboxuser 22432 Sep 29 01:48 ParFork
+-rw-rw-r-- 1 vboxuser vboxuser  9753 Sep 29 01:47 ParFork.c
+-rwxrwxr-x 1 vboxuser vboxuser 23960 Sep 29 02:01 ParThread
+-rw-rw-r-- 1 vboxuser vboxuser  7961 Sep 29 02:00 ParThread.c
+-rwxrwxr-x 1 vboxuser vboxuser 16672 Sep 29 05:11 PipeCompress
+-rw-rw-r-- 1 vboxuser vboxuser  5612 Sep 27 09:52 PipeCompress.c
+-rw-rw-r-- 1 vboxuser vboxuser    42 Sep 29 05:04 source.txt
+-rw-rw-r-- 1 vboxuser vboxuser  4096 Sep 29 05:12 typescript.txt
+MoreShell> date -u
+Mon Sep 29 05:15:40 AM UTC 2025
+MoreShell> more MoreShell.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+#define MAX_LINE_LENGTH 1024
+#define MAX_ARGS 64
+#define PROMPT "MoreShell> "
+
+/**
+ * Executes a command in a child process, passing an array of arguments.
+ * @param args An array of strings where args[0] is the command and the rest are
+ arguments.
+ */
+void execute_command(char *args[]) {
+    pid_t pid;
+    int status;
+
+    // 1. Fork a new process
+    pid = fork();
+
+[7m--More--(18%)[27m    if (pid < 0) {
+[7m--More--(18%)[27m        // Fork failed
+[7m--More--(19%)[27m        perror("fork failed");
+[7m--More--(20%)[27m        return;
+[7m--More--(21%)[27m    } [K
+[7m--More--(21%)[27m    [K
+[7m--More--(21%)[27m    if (pid == 0) {
+[7m--More--(22%)[27m        // --- CHILD PROCESS ---
+[7m--More--(23%)[27m        [K
+[7m--More--(24%)[27m        // Execute the command: execvp searches the PATH environment variable fo
+[7m--More--(27%)[27mr the command.
+[7m--More--(27%)[27m        // The args array must be NULL-terminated for execvp to work correctly.
+[7m--More--(30%)[27m        if (execvp(args[0], args) == -1) {
+[7m--More--(32%)[27m            // If execvp returns, an error occurred (e.g., command not found)
+[7m--More--(35%)[27m            perror("MoreShell: Command execution failed");
+[7m--More--(37%)[27m            exit(EXIT_FAILURE);
+[7m--More--(38%)[27m        }[K
+[7m--More--(38%)[27m    } else {[K
+[7m--More--(39%)[27m        // --- PARENT PROCESS ---
+[7m--More--(40%)[27m        [K
+[7m--More--(40%)[27m        // The parent waits for the child process to finish.
+[7m--More--(43%)[27m        if (waitpid(pid, &status, 0) == -1) {
+[7m--More--(44%)[27m            perror("waitpid failed");
+[7m--More--(46%)[27m        }[K
+[7m--More--(46%)[27m    }[K
+[7m--More--(46%)[27m}[K
+[7m--More--(46%)[27m[K
+[7m--More--(46%)[27mint main() {[K
+[7m--More--(47%)[27m    char command_line[MAX_LINE_LENGTH];
+[7m--More--(48%)[27m    char *args[MAX_ARGS]; // Array to hold the command and its arguments
+[7m--More--(51%)[27m    char *token;
+[7m--More--(52%)[27m    int arg_count;
+[7m--More--(52%)[27m[K
+[7m--More--(52%)[27m    while (1) {
+[7m--More--(53%)[27m        printf(PROMPT);
+[7m--More--(54%)[27m        fflush(stdout); 
+[7m--More--(55%)[27m[K
+[7m--More--(55%)[27m        // Read the command from standard input
+[7m--More--(57%)[27m        if (fgets(command_line, MAX_LINE_LENGTH, stdin) == NULL) {
+[7m--More--(59%)[27m            // Handle Ctrl+D (EOF)
+[7m--More--(60%)[27m            printf("\nExiting MoreShell...\n");
+[7m--More--(62%)[27m            break;
+[7m--More--(63%)[27m        }[K
+[7m--More--(63%)[27m[K
+[7m--More--(63%)[27m        // Remove the trailing newline character
+[7m--More--(65%)[27m        command_line[strcspn(command_line, "\n")] = '\0';
+[7m--More--(67%)[27m        [K
+[7m--More--(67%)[27m        // Ignore empty commands
+[7m--More--(69%)[27m        if (strlen(command_line) == 0) {
+[7m--More--(70%)[27m            continue;
+[7m--More--(71%)[27m        }[K
+[7m--More--(71%)[27m        [K
+[7m--More--(72%)[27m        // --- ARGUMENT PARSING (TOKENIZATION) ---
+[7m--More--(74%)[27m        arg_count = 0;
+[7m--More--(74%)[27m        [K
+[7m--More--(75%)[27m        // Use strtok to get the first token (the command)
+[7m--More--(77%)[27m        token = strtok(command_line, " ");
+[7m--More--(79%)[27m        [K
+[7m--More--(79%)[27m        while (token != NULL && arg_count < MAX_ARGS - 1) {
+[7m--More--(81%)[27m            args[arg_count++] = token;
+[7m--More--(82%)[27m            // Get the next token (argument)
+[7m--More--(84%)[27m            token = strtok(NULL, " ");
+[7m--More--(86%)[27m        }[K
+[7m--More--(86%)[27m        [K
+[7m--More--(86%)[27m        // The argument array MUST be NULL-terminated for execvp
+[7m--More--(89%)[27m        args[arg_count] = NULL; 
+[7m--More--(90%)[27m[K
+[7m--More--(90%)[27m        // Check for the 'exit' command (must be done AFTER parsing)
+[7m--More--(92%)[27m        if (strcmp(args[0], "exit") == 0) {
+[7m--More--(94%)[27m            break;
+[7m--More--(95%)[27m        }[K
+[7m--More--(95%)[27m        [K
+[7m--More--(95%)[27m        // Execute the parsed command and its arguments
+[7m--More--(98%)[27m        execute_command(args);
+[7m--More--(99%)[27m    }[K
+[7m--More--(99%)[27m[K
+[7m--More--(99%)[27m    return 0;
+[7m--More--(99%)[27m}[K
+MoreShell> exit
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ gcc DupShell.c -o DupShell
+[?2004l[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ dup2
+[?2004ldup2: command not found
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ dup
+[?2004lCommand 'dup' not found, but there are 19 similar ones.
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ las - l[K[K[K[K[K[Ks -l | wc -l
+[?2004l26
+[?2004h]0;vboxuser@ubuntu: ~/CS4440/Prj1[01;32mvboxuser@ubuntu[00m:[01;34m~/CS4440/Prj1[00m$ exit
+[?2004lexit
+
+Script done on 2025-09-29 05:17:15+00:00 [COMMAND_EXIT_CODE="0"]
