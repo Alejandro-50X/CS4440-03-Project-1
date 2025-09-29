@@ -4,7 +4,9 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-// the compression file now takes arguments 
+/*
+    This is doing the same task as MyCompress but the difference in this is that it now takes arguments so we don't have to hard code the source and destination. 
+*/
 int main(int argc, char *argv[]) {
     FILE *source, *destination;
     int character;
