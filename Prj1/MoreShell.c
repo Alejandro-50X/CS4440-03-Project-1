@@ -9,9 +9,8 @@
 #define MAX_ARGS 64
 #define PROMPT "MoreShell> "
 
-/**
- * Executes a command in a child process passing an array of arguments
- * @param args An array of strings where args[0] is the command and the rest are arguments.
+/*
+     Moresheel is a basic terminal just like MinShell that reads commands from the user and take the command and its argument and execute the command. 
  */
 void execute_command(char *args[]) {
     pid_t pid;
