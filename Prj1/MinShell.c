@@ -5,6 +5,11 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+/*
+    This will put us into a shell environment prompting us to input commands and reading those commands and executing them. It will take the commands 
+    like "ls", "date", and "exit".
+*/
+
 #define MAX_COMMAND_LENGTH 1024
 #define PROMPT "MinShell> "
 
@@ -24,9 +29,7 @@ void execute_command(char *command) {
         // this is the child process
         
         // This is the array of arguments for execvp
-        // since we are handling argument-less commands 
-        // the command itself is the first element (argv[0]) 
-        // and the list is terminated by a NULL pointer
+        // since we are handling argument less commands 
         char *args[] = {command, NULL};
 
         // Execute the command 
