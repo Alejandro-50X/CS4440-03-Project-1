@@ -5,9 +5,11 @@
 #include <sys/wait.h>
 #include <string.h>
 
-// function containing the compression logic
+/*
+    This program uses pipe for communication that takes a source file and compresses its content. Once it does that it writes the compressed data to the destination file. 
+*/
+
 void compress_data(FILE *source_file, int write_fd);
-// function containing the write to file logic
 void write_data(int read_fd, const char *dest_filename);
 
 // the main process
@@ -30,11 +32,9 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // fork a new process
     pid = fork();
 
     if (pid < 0) {
-        // fork failed
         perror("fork failed");
         return 1;
     }
