@@ -1,0 +1,23 @@
+Script started on 2025-09-28 22:59:18-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="32"]
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ gcc compress.c -o compressmp[K[K[K[Kss
+[?2004l[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ ./commpre[K[K[K[Kpress
+[?2004lElapsed time: 0.003 seconds
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ ./compress
+[?2004lElapsed time: 0.003 seconds
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ ./compress
+[?2004lElapsed time: 0.024 seconds
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ ./compress
+[?2004lSegmentation fault (core dumped)
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ exit()
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> ext[Kit
+[?2004lbash: syntax error near unexpected token `exit'
+[?2004h]0;arthur-morgan@arthur-morgan-VirtualBox: ~/Desktop/Fall 2025/Project-1[01;32marthur-morgan@arthur-morgan-VirtualBox[00m:[01;34m~/Desktop/Fall 2025/Project-1[00m$ exit
+[?2004lexit
+
+Script done on 2025-09-28 23:04:13-07:00 [COMMAND_EXIT_CODE="2"]
