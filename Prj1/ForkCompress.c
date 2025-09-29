@@ -4,6 +4,11 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+/*
+    The main function of this program is to compress files with argument validation and process creation like fork. 
+    Having a parent and child and making sure they execute properly.
+*/
+
 int main(int argc, char *argv[]) {
     pid_t pid;
     int status;
