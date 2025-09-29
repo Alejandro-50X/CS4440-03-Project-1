@@ -10,6 +10,11 @@
 #define PROMPT "DupShell> "
 #define DELIMITER " "
 
+/*
+    The dupShell program will allow you to enter a shell environemnt and use commands like ls -l | wc and the exit command. It allows for the execution of single commands 
+    with using some pipelining. 
+*/
+
 // function to parse a single command string into an array of arguments
 void parse_command(char *line, char *args[]) {
     int arg_count = 0;
